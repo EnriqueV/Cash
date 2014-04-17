@@ -1,0 +1,21 @@
+{
+    "version":"1.0",
+	"name": "Cash",
+    "description": "Chash es una app que te ayudara a calcular tus gastos mensules conforme a tu salario ademas de guardar registros de los gatos que haces, adiario con el objetivo que tengas un mayor control de tus finanzas",
+    "launch_path": "/index.html",
+	"fullscreen": "false",
+    "icons": {
+
+         "16": "/images/seis.png",
+        "32": "/images/trein.png",
+        "48": "/images/dies.png",
+        "128": "/images/notas.png"
+    },
+	"developer": {
+        "name": "Eduardo Gomez Valencia",
+        "url": "https://groupdeveloper.hol.es"
+    },
+    "default_locale": "es"
+
+}
+

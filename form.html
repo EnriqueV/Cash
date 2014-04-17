@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"> 
+	<title></title> 
+	<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile-1.3.1.min.js"></script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="menu">
+		<div data-role="header" data-position="fixed" id="header" data-theme="b">
+			<h3>Calcular sueldo</h3>  
+<a href="menu.html"data-role="button" data-icon="back" class="ui-btn-right">Back</a>
+		</div>
+
+<div data-role="content">
+	<script type="text/javascript">
+function mostrar()
+{
+  var sueldo=document.getElementById('sueldo').value;
+sueldo=parseFloat(sueldo);
+ var deudas=document.getElementById('deudas').value;
+  deudas=parseFloat(deudas);
+  var descuentos=document.getElementById('descuentos').value;
+  descuentos=parseFloat(descuentos);
+  var resultado= deudas+descuentos;
+  var sueldoLibre= sueldo-resultado;
+   alert('Sueldo Libre :'+sueldoLibre);
+     
+     if(sueldoLibre>resultado){
+
+       var interes= 0.03;
+
+         var aorroFinal= sueldoLibre*interes; 
+         var libre=aorroFinal.toFixed(2);
+         var sueldoNeto= sueldoLibre-aorroFinal;
+          var devengar=sueldoNeto.toFixed(2); 
+         
+
+          alert("¡felicitaciones! Tienes una solvencia economica satisfactoria,puedes aorrar el 3% de tu sueldo y guardarlo para futuros gastos o algo que decees comprar!");
+           alert("si deceas aorrar el 3% de tu sueldo tendrias un aorro de :"+libre+"\n"+" y  un sueldo neto de  :"+devengar);
+
+            
+        }else{
+
+           alert(" ¡vaya! parece que no tienes una solvencia economica para este mes, tu sueldo es menor o igual que tus gastos debes disminuir tu gasto financiero :(");
+           
+        }
+
+       
+
+}
+</script>
+
+<form>
+Ingrese su Sueldo Mensual:
+<input type="number" id="sueldo"><br>
+Ingrese Monto de gastos necesarios:
+<input type="number" id="deudas"><br>
+Monto de deudas a pagar:
+<input type="number" id="descuentos"><br>
+<input type="button" value="Calcular" data-icon="check" onClick="mostrar()">
+<input type="reset" data-icon="delete"value="Limpiar">
+</form>
+</div>
+</div>
+
+	
+</body>
+</html>
